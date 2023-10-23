@@ -1,2 +1,9 @@
-package com.abhi.contentcalender.model;public enum Type {
+package com.abhi.contentcalender.model;
+
+public enum Type {
+    VIDEO,
+    ARTICLE,
+    IMAGE,
+    AUDIO,
+    OTHER
 }

@@ -2,13 +2,17 @@ package com.abhi.contentcalender;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.web.client.RestTemplate;
+
+import java.util.Arrays;
 
 @SpringBootApplication
-public class ContentCalenderApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ContentCalenderApplication.class, args);
-        System.out.println("Hello World");
+        ConfigurableApplicationContext configure = SpringApplication.run(Application.class, args);
+        RestTemplate restTemplate = (RestTemplate) configure.getBean("restTemplate");
     }
 
 }
